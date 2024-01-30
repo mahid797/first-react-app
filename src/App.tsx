@@ -231,8 +231,8 @@ function App() {
 
 		userService
 			.create(newUser)
-			.then(({ data: newUser }) => {
-				setUsers([newUser, ...users]);
+			.then(({ data: savedUser }) => {
+				setUsers([savedUser, ...users]);
 			})
 			.catch((err) => {
 				setError(err.message);
