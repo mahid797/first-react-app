@@ -231,8 +231,8 @@ function App() {
 
 		userService
 			.create(newUser)
-			.then(({ data: savedUser }) => {
-				setUsers([savedUser, ...users]);
+			.then(({ data: newUser }) => {
+				setUsers([newUser, ...users]);
 			})
 			.catch((err) => {
 				setError(err.message);
@@ -270,20 +270,17 @@ function App() {
 				{users.map((user) => (
 					<li
 						key={user.id}
-						className="list-group-item d-flex justify-content-between"
-					>
+						className="list-group-item d-flex justify-content-between">
 						{user.name}
 						<div>
 							<button
 								className="btn btn-outline-secondary mx-1"
-								onClick={() => updateUser(user)}
-							>
+								onClick={() => updateUser(user)}>
 								Update
 							</button>
 							<button
 								className="btn btn-outline-danger mx-1"
-								onClick={() => deleteUser(user)}
-							>
+								onClick={() => deleteUser(user)}>
 								Delete
 							</button>
 						</div>
