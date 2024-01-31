@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Alert from './components/Alert';
 import { Button } from './components/Button';
 import { BsAmazon } from 'react-icons/bs';
-import Likes from './components/Likes';
+import Like from './components/Like';
 import NavBar from './components/NavBar';
 import Cart from './components/Cart';
 import Message from './components/message';
